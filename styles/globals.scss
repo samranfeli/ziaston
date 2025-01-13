@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .clearfix {
+    @apply after:clear-both after:content-[''] after:table before:clear-both before:content-[''] before:table;
+  }
+  .max-width-container{
+    max-width: 1300px;
+  }
+  .content-min-h-desktop{
+    min-height: calc(100vh - 230px);
+  }
+}
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+
+@font-face {
+  font-family: 'samim';
+  src: url('/assets/fonts/samim/Samim-FD.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'samim';
+  src: url('/assets/fonts/samim/Samim-Medium-FD.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'samim';
+  src: url('/assets/fonts/samim/Samim-Bold-FD.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'vazir';
+  src: url('/assets/fonts/vazir/Vazir-FD.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'vazir';
+  src: url('/assets/fonts/vazir/Vazir-Medium-FD.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'vazir';
+  src: url('/assets/fonts/vazir/Vazir-Bold-FD.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
+
+
+.slick-dots {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  right: 0;
+}
+.slick-dots li{
+  width: auto;
+}
+.slick-dots li button:before{
+  display: none;
+}
+.slick-dots li button{
+  background-color: #bbb;
+  height: 3px;
+  width: 3px;
+  border-radius: 5px;
+  transition: all .3s linear;
+}
+.slick-dots li.slick-active button{
+  background-color: white;
+  width: 35px;
+}
+
+
+
+.inserted-content {
+  p{
+    margin-bottom: 15px;
+  }
+  h2{
+    font-weight: bold;
+    font-size: 19px;
+    margin-bottom: 10px;
+  }
+  h3{
+    font-weight: bold;
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+  h5{
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  ul{
+    list-style-type: disc;
+    list-style-position: inside;
+    li{
+      margin-bottom: 5px;
+    }
+  }
+}
