@@ -21,7 +21,7 @@ const Product: NextPage<Props> = props => {
                 <h2 className="text-xl xl:text-2xl font-bold mb-5"> {name} </h2>
                 <div className="border flex gap-5">
                     {images?.map(image => (
-                        <Image src={image.src} alt={image.alt || name || ""} className="w-60 h-60 object-contain" width={500} height={400} />
+                        <Image key={image.id} src={image.src} alt={image.alt || name || ""} className="w-60 h-60 object-contain" width={500} height={400} />
                     ))}
                 </div>
 
