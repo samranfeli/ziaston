@@ -19,7 +19,7 @@ const Products: NextPage<Props> = props => {
                 </h2>
 
                 <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-5 xl:gap-10">
-                    {props.products.map(product => (
+                    {props.products?.map(product => (
                         <RecentProductItem product={product} key={product.id} />
                     ))}
                 </div>
