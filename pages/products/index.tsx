@@ -4,11 +4,11 @@ import { getproducts } from "@/actions/wooActions";
 import RecentProductItem from "@/components/homeSections/RecentProductItem";
 
 type Props = {
-    products: ProductItemType[];
+    products?: ProductItemType[];
 }
 
 const Products: NextPage<Props> = props => {
-    console.log(props.products)
+
     return (
         <section className="py-10 lg:py-24 bg-[#99a14b0d] px-4">
             <div className="max-w-7xl mx-auto">
