@@ -8,7 +8,6 @@ const Header = () => {
             <div className="max-width-container mx-auto">
                 <div className="flex justify-between items-center py-3 px-5">
                     <Link 
-                        prefetch={false}
                         href="/"
                         className="text-lg md:text-2xl font-bold text-green1-800 flex items-center gap-3"
                     >

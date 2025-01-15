@@ -2,12 +2,16 @@ import { BlogItemType } from "@/types/blog";
 import Image from "next/image";
 import Link from "next/link";
 import parse from 'html-react-parser';
+import { useState } from "react";
 
 type Props = {
     posts?: BlogItemType[];
 }
 
 const RecentBlogs: React.FC<Props> = props => {
+
+    const [loading, setLoading] = useState<boolean>(false);
+    
     return (
         <section className="py-10 lg:py-24 px-3 md:px-5">
             <div className="max-width-container mx-auto">
@@ -37,11 +41,12 @@ const RecentBlogs: React.FC<Props> = props => {
                                 <div className="transition-all text-sm md:text-md text-neutral-400 group-hover:text-white mb-3 text-justify"> {parse(post.excerpt.rendered)} </div>
 
                                 <Link
+                                    onClick={() => {setLoading(true)}}
                                     href={post.slug}
-                                    prefetch={false}
                                     className="transition-all text-orange-400 font-semibold group-hover:bg-white w-full text-center inline-block py-2 max-sm:text-sm"
                                 >
-                                    ادامه مطلب
+                                    
+                                    {loading ? "..." : "ادامه مطلب"}
                                 </Link>
                             </div>
 

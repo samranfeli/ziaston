@@ -1,15 +1,14 @@
-import Link from "next/link";
+import { NextPage } from "next";
 import { ProductItemType } from "@/types/woo";
-import RecentProductItem from "./RecentProductItem";
+import { getproducts } from "@/actions/wooActions";
+import RecentProductItem from "@/components/homeSections/RecentProductItem";
 
 type Props = {
-    products?: ProductItemType[];
+    products: ProductItemType[];
 }
 
-const RecentProducts: React.FC<Props> = props => {
-
-    if (!props.products?.length) return null;
-
+const Products: NextPage<Props> = props => {
+    console.log(props.products)
     return (
         <section className="py-10 lg:py-24 bg-[#99a14b0d] px-4">
             <div className="max-w-7xl mx-auto">
@@ -24,19 +23,22 @@ const RecentProducts: React.FC<Props> = props => {
                         <RecentProductItem product={product} key={product.id} />
                     ))}
                 </div>
-
-                {props.products.length > 5 && <div className="text-center mt-6 lg:mt-14">
-                    <Link
-                        href="/products"
-                        className="px-5 py-2 inline-block text-white rounded bg-green1-800 md:text-lg hover:bg-green1-600"
-                    >
-                        مشاهده همه محصولات
-                    </Link>
-                </div>}
-
             </div>
         </section>
     )
 }
 
-export default RecentProducts;
+export async function getStaticProps() {
+
+    const products: any = await getproducts({ per_page: 30, page: 1 });
+
+    return ({
+        props: {
+            products: products?.data || null
+        },
+        revalidate: 3600
+    })
+}
+
+
+export default Products;

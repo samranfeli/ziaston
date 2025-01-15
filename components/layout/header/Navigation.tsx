@@ -40,6 +40,7 @@ const Navigation = () => {
                     {menuItems.map(item => (
                         <div className="max-md:px-5 max-md:py-2.5 max-md:border-t" key={item.text}>
                             <Link
+                                onClick={()=>{setOpen(false)}}
                                 prefetch={false}
                                 href={item.url}
                                 title={item.text}

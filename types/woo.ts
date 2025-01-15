@@ -7,8 +7,12 @@ export interface ProductItemType {
     name?: string;
     slug: string;
     price?: number;
+    price_html?: string;
     id: number;
     description?: string;
     short_description?: string;
-
+    attributes?:{
+        name?: string;
+        options?:string[]
+    }[]
 }

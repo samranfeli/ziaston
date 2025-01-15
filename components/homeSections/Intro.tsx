@@ -15,7 +15,6 @@ const Intro = () => {
             </p>
             <Link
                 href="/products"
-                prefetch={false}
                 className="px-5 py-2 inline-block text-white rounded bg-green1-800 md:text-lg hover:bg-green1-600"
             >
                 محصولات ما
