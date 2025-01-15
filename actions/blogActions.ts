@@ -43,3 +43,18 @@ export const getBlogs = async (options: { per_page?: number, page?: number; tags
     }
 
 }
+
+export const GetBlogDetail = async (slug : string) => {
+    try {
+      const res = await axios.get(
+        `${WpEndpoint}/wp-json/wp/v2/posts/?slug=${slug}`,
+        {
+          headers: {
+          },
+        }
+      );
+      return res;
+    } catch (error : any) {
+      return error.response
+    }
+};

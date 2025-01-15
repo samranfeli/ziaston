@@ -32,7 +32,6 @@ const Product: NextPage<Props> = props => {
         amountOptions.sort((b,a) => b.value - a.value);
     }
 
-    console.dir(props.productData);
     return (
         <section>
             <div className="max-width-container mx-auto px-5 py-10 px-5">

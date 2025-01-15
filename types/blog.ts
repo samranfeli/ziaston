@@ -3,7 +3,6 @@ export interface BlogItemType {
 
     jetpack_featured_media_url?: string;
 
-
     date: string;
     slug: string;
     acf: {
@@ -34,3 +33,32 @@ export interface BlogItemType {
     time_read?: string;
 
 }
+
+
+export interface PostDetailType {
+    id: number;
+
+    jetpack_featured_media_url?: string;
+
+    date: string;
+    slug: string;
+    acf: {
+        time_read: string
+    };
+    categories: [
+      number  
+    ];
+    excerpt: {
+        rendered: string
+    }
+    title: {
+        rendered: string;
+    };
+
+    tags?: number[];
+    content?:{
+        rendered?: string;
+    };
+
+}
+
