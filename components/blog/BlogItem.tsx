@@ -27,16 +27,16 @@ const BlogItem: React.FC<Props> = props => {
                 height={288}
                 className="w-full max-lg:max-h-60 lg:h-72 object-center object-cover"
             />
-            <div className="p-4 lg:p-6 bg-[#fafaf6] lg:min-h-72 group-hover:bg-[#645087] transition-all">
+            <div className="p-4 lg:p-6 bg-[#fafaf6] lg:min-h-72 md:group-hover:bg-[#645087] transition-all">
 
-                <h3 className="transition-all text-neutral-700 group-hover:text-white font-semibold text-md lg:text-2xl mb-4"> {post.title?.rendered} </h3>
+                <h3 className="transition-all text-neutral-700 md:group-hover:text-white font-semibold text-md lg:text-2xl mb-4"> {post.title?.rendered} </h3>
 
-                <div className="transition-all text-sm md:text-md text-neutral-400 group-hover:text-white mb-3 text-justify"> {parse(post.excerpt.rendered)} </div>
+                <div className="transition-all text-sm md:text-md text-neutral-400 md:group-hover:text-white mb-3 text-justify"> {parse(post.excerpt.rendered)} </div>
 
                 <Link
                     onClick={() => { setLoading(true) }}
                     href={post.slug}
-                    className="transition-all text-orange-400 font-semibold group-hover:bg-white w-full text-center inline-block py-2 max-sm:text-sm"
+                    className="transition-all text-orange-400 font-semibold md:group-hover:bg-white w-full text-center inline-block py-2 max-sm:text-sm"
                 >
                     ادامه مطلب
                     {loading && <Loading color="orange" className="align-middle mx-2" />}

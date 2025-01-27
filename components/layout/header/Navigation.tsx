@@ -14,7 +14,7 @@ const Navigation = () => {
             { text: "درباره باغ زیتون", url: "/about" },
             { text: "محصولات", url: "/products" },
             { text: "مقالات", url: "/blogs" },
-            { text: "قوانین و مقررات", url: "terms" },
+            // { text: "قوانین و مقررات", url: "terms" },
             { text: "تماس با ما", url: "/contact" }
         ];
 

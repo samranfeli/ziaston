@@ -58,3 +58,34 @@ export const GetBlogDetail = async (slug : string) => {
       return error.response
     }
 };
+
+
+export const GetAllCategories = async () => {
+    try {
+      const res = await axios.get(
+        `${WpEndpoint}/wp-json/wp/v2/categories`,
+        {
+          headers: {
+          },
+        }
+      );
+      return res;
+    } catch (error : any) {
+      return error.response
+    }
+};
+
+export const GetAllTags = async () => {
+    try {
+      const res = await axios.get(
+        `${WpEndpoint}/wp-json/wp/v2/tags`,
+        {
+          headers: {
+          },
+        }
+      );
+      return res;
+    } catch (error : any) {
+      return error.response
+    }
+};
