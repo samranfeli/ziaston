@@ -23,8 +23,9 @@ const BlogItem: React.FC<Props> = props => {
             <Image
                 src={post.jetpack_featured_media_url || ""}
                 alt={post.title.rendered}
-                width={433}
-                height={288}
+                width={351}
+                height={240}
+                sizes="(max-width: 768px) 90vw, (max-width: 1350px) 30vw, 90vw"
                 className="w-full max-lg:max-h-60 lg:h-72 object-center object-cover"
             />
             <div className="p-4 lg:p-6 bg-[#fafaf6] lg:min-h-72 md:group-hover:bg-[#645087] transition-all">

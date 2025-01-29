@@ -1,5 +1,4 @@
-import Image from "next/image";
-import Slider from "react-slick";
+import Carousel from "../ui/Carousel";
 
 const Hero = () => {
 
@@ -39,37 +38,11 @@ const Hero = () => {
             }
         ]
 
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-    };
-
     return (
         <section className="overflow-hidden">
-            <Slider {...settings}>
-                {items.map((item, index) => (
-                    <div className="relative" key={item.imageUrl}>
-
-                        <Image
-                            src={item.imageUrl}
-                            alt={item.imageAlt}
-                            width={1200}
-                            height={550}
-                            className="w-full h-80 xl:h-550 object-cover"
-                            priority={index === 1}
-                        />
-
-                        <div className="text-xl xl:text-4xl text-white font-bold absolute right-0 top-24 w-full text-right drop-shadow-lg">
-                            <div className="max-width-container mx-auto px-5">
-                                {item.text}
-                            </div>
-                        </div>
-                    </div>
-                ))}
-            </Slider>
+            <Carousel
+                items={items.map(item => ({imageUrl: item.imageUrl, title: item.text, imageAlt: item.imageAlt}))}
+            />
         </section>
     )
 }

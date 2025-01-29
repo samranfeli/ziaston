@@ -24,6 +24,7 @@ const Navigation = () => {
                 type="button"
                 onClick={() => {setOpen(true)}}
                 className="text-green1-800 md:hidden"
+                aria-label="open menu"
             >
                 <Menu />
             </button>

@@ -10,12 +10,12 @@ const Intro = () => {
             >
                 به <span className="text-green1-800 md:text-5xl"> باغ زیتون </span> خوش آمدید
             </h2>
-            <p className="text-neutral-400 max-w-3xl mx-auto max-sm:text-sm text-center mb-8 lg:mb-10">
+            <p className="text-neutral-500 max-w-3xl mx-auto max-sm:text-sm text-center mb-8 lg:mb-10">
                 باغ زیتون به تازگی فعالیتش رو تو عرضه محصولات طبیعی و ارگانیک شروع کرده. ما داریم تلاش میکنیم که تمام هموطنان عزیزمون در سراسر ایران بتونن به محصولات با کیفیت و بدون مواد شیمیایی دسترسی داشته باشن. محصولات باغ زیتون ما شامل زیتون انواع روغن زیتون و صابون زیتون هست.
             </p>
             <Link
                 href="/products"
-                className="px-5 py-2 inline-block text-white rounded bg-green1-800 md:text-lg hover:bg-green1-600"
+                className="px-5 py-2 inline-block text-white rounded bg-green1-900 md:text-lg hover:bg-green1-700"
             >
                 محصولات ما
             </Link>

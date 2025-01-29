@@ -12,16 +12,16 @@ const Footer = () => {
                 </p>
 
                 <div className="flex gap-3">
-                    <a target="_blank" href="https://www.instagram.com/baghzeytoon.ir" className="white">
+                    <a target="_blank" href="https://www.instagram.com/baghzeytoon.ir" className="white" title="اینستاگرام باغ زیتون">
                         <Instagram className="w-8 h-8 fill-current" />
                     </a>
-                    <a target="_blank" href="https://www.linkedin.com/company/baghzeytoon/" className="white">
+                    <a target="_blank" href="https://www.linkedin.com/company/baghzeytoon/" className="white" title="لینکدین باغ زیتون">
                         <Linkedin className="w-8 h-8 fill-current" />
                     </a>
-                    <a target="_blank" href="https://wa.me/989112193566" className="white">
+                    <a target="_blank" href="https://wa.me/989112193566" className="white" title="واتس اپ باغ زیتون">
                         <WhatsApp className="w-8 h-8 fill-current" />
                     </a>
-                    <a target="_blank" href="https://telegram.me/baghzeytoon.ir" className="white">
+                    <a target="_blank" href="https://telegram.me/baghzeytoon.ir" className="white" title="تلگرام باغ زیتون">
                         <Telegram className="w-8 h-8 fill-current" />
                     </a>
                 </div>
