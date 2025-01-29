@@ -8,6 +8,7 @@ import Loading from "../ui/icons/Loading";
 type Props = {
     post: BlogItemType;
     index?: number;
+    priority?: boolean;
 }
 
 const BlogItem: React.FC<Props> = props => {
@@ -27,6 +28,7 @@ const BlogItem: React.FC<Props> = props => {
                 height={240}
                 sizes="(max-width: 768px) 90vw, (max-width: 1350px) 30vw, 90vw"
                 className="w-full max-lg:max-h-60 lg:h-72 object-center object-cover"
+                priority={!!props.priority}
             />
             <div className="p-4 lg:p-6 bg-[#fafaf6] lg:min-h-72 md:group-hover:bg-[#645087] transition-all">
 

@@ -18,15 +18,14 @@ const Blogs: React.FC<Props> = props => {
                 </h2>
 
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                    {props.posts?.map(post => (
+                    {props.posts?.map((post,index) => (
                         <BlogItem
                             key={post.id}
                             post={post}
+                            priority={!index}
                         />
                     ))}
                 </div>
-
-
 
             </div>
         </section>

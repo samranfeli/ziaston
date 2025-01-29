@@ -4,7 +4,7 @@ import Captions from "yet-another-react-lightbox/plugins/captions";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 import "yet-another-react-lightbox/plugins/captions.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 
 type Props = {
@@ -19,6 +19,13 @@ const ProductImageGallery: React.FC<Props> = props => {
 
     const { images } = props;
 
+    let isMobile = false;
+    
+    useEffect(()=>{
+        if(window?.innerWidth && window.innerWidth < 900){
+            isMobile = true;
+        }
+    },[]);
 
     const [open, setOpen] = useState(false);
     const [slideIndex, setSlideIndex] = useState(0);
@@ -41,8 +48,8 @@ const ProductImageGallery: React.FC<Props> = props => {
                         priority={!index}
                         src={slide.src}
                         alt={slide.alt}
-                        width={index ? 200 : 610}
-                        height={index ? 130 : 398}
+                        width={isMobile ? 300 :index ? 200 : 610}
+                        height={isMobile ? 200 : index ? 130 : 398}
                         //sizes="(max-width: 767px) 100vw, 50vw"
                         onClick={() => { openLightBox(index); }}
                         className={`cursor-pointer border border-neutral-200 w-full object-cover h-full ${index ? "hidden md:block md:col-span-1" : "md:col-span-3"}`}
